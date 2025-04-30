@@ -38,12 +38,13 @@
 </head>
 <body>
   <button class="big-button" id="sendMail">Bekijk standaardmail</button>
+
   <script>
     // Paramètres du mail
-    var to = "kabinet.ph.close@brucity.be";
-    var cc = "cabinet.a.maes@brucity.be,stoprodeoatomium@gmail.com";
-    var subject = "Stop rodeowaanzin !";
-    var body = Geachte burgemeester,
+    const to = "kabinet.ph.close@brucity.be";
+    const cc = "cabinet.a.maes@brucity.be,stoprodeoatomium@gmail.com";
+    const subject = "Stop rodeowaanzin !";
+    const body = `Geachte burgemeester,
 
 Ik woon in Laken en schrijf u omdat ik geteisterd word door geluidsoverlast van rodeorijders.
 
@@ -59,10 +60,10 @@ Ik vraag u met aandrang om veel harder en doortastender op te treden tegen dit p
 
 Ik voeg het collectief Stop Rodeo Atomium toe als bestemmeling van deze mail.
 
-Vriendelijke groet, ;
+Vriendelijke groet,`;
 
     // Construction du lien mailto avec encodage
-    var link = "mailto:" + to
+    const link = "mailto:" + to
       + "?cc=" + encodeURIComponent(cc)
       + "&subject=" + encodeURIComponent(subject)
       + "&body=" + encodeURIComponent(body);
